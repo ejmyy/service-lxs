@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { 
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+// Components
+import Header from './components/header/header';
+import HomePage from './components/pages/homePage';
+import Faq from './components/pages/faq';
+import Footer from './components/footer/footer';
+
+// Includes
+import './assets/css/main.css';
 
 class App extends Component {
   render() {
     return (
+      <Router>      
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Hell</h1>
-        </header>
-        <p className="App-intro">
-          Milujeme INS 
-        </p>
+
+          <Header/>
+
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/faq' component={Faq} />
+          
+          <Footer/>        
+      
       </div>
+      </Router>
     );
   }
 }

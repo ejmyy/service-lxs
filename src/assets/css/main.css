@@ -1,0 +1,68 @@
+/* 
+    Basic
+*/
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* 
+    Header 
+*/
+
+header {
+    display: block;
+    width: 100%;
+    background-color: blueviolet;
+    color: beige;
+    position: relative;
+    height: 90px;
+}
+
+nav, 
+nav ul,
+nav ul li{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    padding-top: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 2em;
+}
+
+nav ul li a{
+    color: beige;;
+}
+
+
+nav ul li:first-child {
+    margin-left: 0px;
+}
+
+/* 
+    Content
+*/
+
+.container{
+    /* height: 800px; */
+}
+
+/* 
+    Footer
+*/
+
+footer {
+    display: block;
+    width: 100%;
+    background-color: blueviolet;
+    color: beige;
+    position: relative;
+    height: 90px;
+}
