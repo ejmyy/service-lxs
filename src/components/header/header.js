@@ -12,7 +12,7 @@ class Header extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Servis</Link>
+              <Link to="/servis">Servis</Link>
             </li>
             <li>
               <Link to="/faq">FAQ</Link>            

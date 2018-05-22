@@ -8,6 +8,8 @@ import {
 // Components
 import Header from './components/header/header';
 import HomePage from './components/pages/homePage';
+import Servis from './components/pages/servis';
+import CarRepair from './components/pages/carrepair';
 import Faq from './components/pages/faq';
 import Footer from './components/footer/footer';
 
@@ -23,6 +25,8 @@ class App extends Component {
           <Header/>
 
             <Route exact path='/' component={HomePage} />
+            <Route exact path='/servis' component={Servis} />
+            <Route exact path='/carrepair' component={CarRepair} />
             <Route exact path='/faq' component={Faq} />
           
           <Footer/>        
