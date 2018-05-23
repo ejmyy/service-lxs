@@ -10,6 +10,7 @@ import {
 // Components
 import Header from './components/header/header';
 import HomePage from './components/pages/homePage';
+import HomePageServis from './components/pagesServis/homePageServis';
 import Servis from './components/pages/servis';
 import CarRepair from './components/pages/carrepair';
 import Default from './components/pages/default';
@@ -37,8 +38,7 @@ class App extends Component {
   renderSwitch(isActive) {
 
     if(isActive) {
-        return <Router>
-                  <div className="App">
+        return <div className="App">
 
                    <Header/>
 
@@ -54,12 +54,35 @@ class App extends Component {
 
                      </Grid>      
 
-                   <Footer/>  
-
                  </div>
-                </Router>
       } else {
-        return 'foo';
+        return <div className="App">
+                <header className="headerServis">
+                  <div className="container">
+                    <nav>
+                      <ul>
+                        <li>
+                          <Link to="/">Moje Stránka</Link>
+                        </li>
+                        <li>
+                          <Link to="/requests">Žádosti</Link>
+                        </li>
+                        <li>
+                          <Link to="/personalProfile">Osobní profil</Link>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </header>
+
+                  <Grid>
+      
+                    <Route exact path='/' component={HomePageServis} />
+                    <Route exact path='/requests' component={HomePageServis} />
+                    <Route exact path='/personalProfile' component={HomePageServis} />
+
+                  </Grid>
+              </div>;
       }
   }
   
@@ -69,19 +92,27 @@ class App extends Component {
 
     return (
         <div>
+
           <div>
-            {this.renderSwitch(this.state.toggleActive)}
+            <Router>
+              {this.renderSwitch(this.state.toggleActive)}
+            </Router>
           </div>
-    
-        <form>
-          <Toggle className="toggleButton"
-            onClick={this.onToggle}
-            on="Klient"
-            off="Servis"
-            offstyle="danger"
-            active={this.state.toggleActive}
-          />
-        </form>
+
+          <footer>
+            <Grid>
+              <form>
+                <Toggle className="toggleButton"
+                  onClick={this.onToggle}
+                  on="Klient"
+                  off="Servis"
+                  offstyle="danger"
+                  active={this.state.toggleActive}
+                />
+              </form>
+            </Grid>
+          </footer>  
+
       </div>
     );
   }

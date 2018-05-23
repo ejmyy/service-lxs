@@ -19,6 +19,10 @@ header {
     height: 90px;
 }
 
+.headerServis{
+    background-color: blue;
+}
+
 nav, 
 nav ul,
 nav ul li{
@@ -67,8 +71,8 @@ nav ul li:first-child {
     background-color: blueviolet;
 }
 
-.coral{
-    background-color: coral;
+.blue{
+    background-color: blue;
 }
 
 footer {
