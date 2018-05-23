@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Faq extends Component {
+class Default extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
           <h1>Faq</h1>
           <p>Lorem ipsum ..</p>
       </div>
@@ -11,4 +11,4 @@ class Faq extends Component {
   }
 }
 
-export default Faq;
+export default Default;
