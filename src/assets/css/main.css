@@ -58,6 +58,19 @@ nav ul li:first-child {
     Footer
 */
 
+.toggleButton{
+    width: 160px !important; 
+    height: 60px !important;
+}
+
+.blueviolet{
+    background-color: blueviolet;
+}
+
+.coral{
+    background-color: coral;
+}
+
 footer {
     display: block;
     width: 100%;
