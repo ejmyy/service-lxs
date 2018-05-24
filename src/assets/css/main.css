@@ -3,7 +3,7 @@
 */
 
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family:'Verdana', sans-serif;
 }
 
 /* 
@@ -13,14 +13,18 @@ body{
 header {
     display: block;
     width: 100%;
-    background-color: #cde256;
+    background-color: #000099;
     color: beige;
     position: relative;
-    height: 90px;
+    height: 70px;
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.75);
+    
 }
 
 .headerServis{
-    background-color: #cde256;
+    background-color: #000099;
 }
 
 nav, 
@@ -90,9 +94,12 @@ nav ul li:first-child {
 
 footer {
     display: block;
-    background-color: #cde256;
+    background-color: #000099;
     color: beige;
-    height: 90px;
+    height: 70px;
+    -webkit-box-shadow: 5px -3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px -3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px -3px 5px 0px rgba(0,0,0,0.75);
 
     padding-top: 10px;
     padding-bottom: 0;
