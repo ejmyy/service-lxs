@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
 import Toggle from 'react-bootstrap-toggle';
-import { 
+import {
   BrowserRouter as Router,
   Route,
   Link
@@ -16,12 +16,17 @@ import CarRepair from './components/pages/carrepair';
 import Default from './components/pages/default';
 import Happy from './components/pages/happy';
 import Login from './components/pages/login';
+import MyPage from './components/pages/myPage';
+import Request from './components/pages/requests';
+import CarServiceDetail from './components/pages/carServiceDetail';
+import LoginJob from './components/pages/loginJob';
+import CarServis from './components/pages/carservis';
 import Footer from './components/footer/footer';
 
 
 // Includes
 import './assets/css/main.css';
-import CarServis from './components/pages/carservis';
+import myPage from "./components/pages/myPage";
 
 class App extends Component {
 
@@ -30,7 +35,7 @@ class App extends Component {
     this.state = { toggleActive: true };
     this.onToggle = this.onToggle.bind(this);
   }
- 
+
   onToggle() {
     this.setState({ toggleActive: !this.state.toggleActive });
   }
@@ -52,7 +57,7 @@ class App extends Component {
                        <Route exact path='/happy' component={Happy} />
                        <Route exact path='/login' component={Login} />
 
-                     </Grid>      
+                     </Grid>
 
                  </div>
       } else {
@@ -76,16 +81,19 @@ class App extends Component {
                 </header>
 
                   <Grid>
-      
+
                     <Route exact path='/' component={HomePageServis} />
-                    <Route exact path='/requests' component={HomePageServis} />
+                    <Route exact path='/myPage' component={MyPage} />
+                    <Route exact path='/carservisservis' component={CarServiceDetail} />
+                      <Route exact path='/requests' component={Request} />
+                      <Route exact path='/loginJob' component={LoginJob} />
                     <Route exact path='/personalProfile' component={HomePageServis} />
 
                   </Grid>
               </div>;
       }
   }
-  
+
 
 
   render() {
@@ -111,7 +119,7 @@ class App extends Component {
                 />
               </form>
             </Grid>
-          </footer>  
+          </footer>
 
       </div>
     );

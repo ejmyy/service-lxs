@@ -14,9 +14,9 @@ class CarServis extends Component {
             <p >Bacon ipsum dolor amet biltong pancetta jowl boudin prosciutto meatball jerky turducken tenderloin. Tail swine tongue, meatball bresaola andouille prosciutto. Meatball ham hock strip steak pork loin drumstick burgdoggen rump, turducken tri-tip. Hamburger ham prosciutto pork loin pig leberkas. Ground round shank jerky sausage, spare ribs pastrami short loin capicola turkey rump tri-tip bresaola.</p>
           </div>
 
-            
+
           <Row className="show-grid">
-          
+
             <Col xs={6} md={4}>
               <Jumbotron>
                 <h1>Letní servis</h1>
@@ -29,11 +29,11 @@ class CarServis extends Component {
                     <Button bsStyle="primary">Objednat</Button>
                   </Link>
                 </p>
-              </Jumbotron>;
+              </Jumbotron>
             </Col>
             <Col xs={6} md={4}>
               <Jumbotron>
-                <h1>Zimní semestr</h1>
+                <h1>Zimní servis</h1>
                 <p>
                   This is a simple hero unit, a simple jumbotron-style component for calling
                   extra attention to featured content or information.
@@ -43,7 +43,7 @@ class CarServis extends Component {
                     <Button bsStyle="primary">Objednat</Button>
                   </Link>
                 </p>
-              </Jumbotron>;
+              </Jumbotron>
             </Col>
             <Col xsHidden md={4}>
               <Jumbotron>
@@ -57,10 +57,10 @@ class CarServis extends Component {
                     <Button bsStyle="primary">Objednat</Button>
                   </Link>
                 </p>
-              </Jumbotron>;
+              </Jumbotron>
             </Col>
           </Row>
-        </div>          
+        </div>
     );
   }
 }
