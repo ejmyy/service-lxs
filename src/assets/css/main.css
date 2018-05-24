@@ -50,6 +50,9 @@ nav ul li:first-child {
     margin-left: 0px;
 }
 
+
+
+
 /* 
     Content
 */
@@ -58,9 +61,19 @@ nav ul li:first-child {
     /* height: 800px; */
 }
 
+.buttonWhite{
+    color: white !important;
+}
+
+
+
 /* 
     Footer
 */
+
+.centerToggleButton{
+    text-align: center;
+}
 
 .toggleButton{
     width: 160px !important; 

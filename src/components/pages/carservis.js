@@ -31,6 +31,7 @@ class CarServis extends Component {
                 </p>
               </Jumbotron>
             </Col>
+
             <Col xs={6} md={4}>
               <Jumbotron>
                 <h1>Zimní servis</h1>
@@ -45,6 +46,7 @@ class CarServis extends Component {
                 </p>
               </Jumbotron>
             </Col>
+            
             <Col xsHidden md={4}>
               <Jumbotron>
                 <h1>Oprava vozu</h1>
@@ -59,6 +61,7 @@ class CarServis extends Component {
                 </p>
               </Jumbotron>
             </Col>
+            
           </Row>
         </div>
     );

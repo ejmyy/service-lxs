@@ -27,9 +27,12 @@ class CarServiceDetail extends Component {
                         <td>Karoserie</td>
                         <td>Levý blatník</td>
                         <td>Petr Novák</td>
-                        <td><ButtonToolbar>
-                            <Button bsStyle="primary"><Link to='/loginJob' >Přihlásit se</Link></Button>
-                        </ButtonToolbar>
+                        <td>
+                            <ButtonToolbar>
+                                <Button  bsStyle="primary">
+                                    <Link className="buttonWhite" to='/loginJob' >Přihlásit se</Link>
+                                </Button>
+                            </ButtonToolbar>
                         </td>
                         <td><a href='#'>Odeslat</a></td>
                     </tr>
@@ -41,7 +44,9 @@ class CarServiceDetail extends Component {
                         <td>Luděk Veselý</td>
                         <td className="white">
                             <ButtonToolbar>
-                                <Button bsStyle="success"><a href="#">Pracuje se</a></Button>
+                                <Button bsStyle="success">
+                                    <Link className="buttonWhite" to='/loginJob' >Pracuje se</Link>
+                                </Button>
                             </ButtonToolbar>
                         </td>
                         <td><a href='#'>Odeslat</a></td>

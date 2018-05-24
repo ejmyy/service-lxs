@@ -1,32 +1,30 @@
+// Imports from NPM
 import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
 import Toggle from 'react-bootstrap-toggle';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-// Components
+// Components Klient
 import Header from './components/header/header';
 import HomePage from './components/pages/homePage';
-import HomePageServis from './components/pagesServis/homePageServis';
 import Servis from './components/pages/servis';
+import CarServis from './components/pages/carservis';
 import CarRepair from './components/pages/carrepair';
 import Default from './components/pages/default';
 import Happy from './components/pages/happy';
 import Login from './components/pages/login';
-import MyPage from './components/pages/myPage';
-import Request from './components/pages/requests';
-import CarServiceDetail from './components/pages/carServiceDetail';
-import LoginJob from './components/pages/loginJob';
-import CarServis from './components/pages/carservis';
-import Footer from './components/footer/footer';
+
+// Components Servis
+import HeaderServis from './components/header/headerServis';
+import HomePageServis from './components/pagesServis/homePageServis';
+import MyPage from './components/pagesServis/myPage';
+import Request from './components/pagesServis/requests';
+import CarServiceDetail from './components/pagesServis/carServiceDetail';
+import LoginJob from './components/pagesServis/loginJob';
 
 
 // Includes
 import './assets/css/main.css';
-import myPage from "./components/pages/myPage";
 
 class App extends Component {
 
@@ -40,76 +38,66 @@ class App extends Component {
     this.setState({ toggleActive: !this.state.toggleActive });
   }
 
-  renderSwitch(isActive) {
+  headerSwitch(isActive){
+    if(isActive){
+      return <Header/>
+    } else {
+      return <HeaderServis/>      
+    }
+  }
 
-    if(isActive) {
-        return <div className="App">
+  routeSwitch(isActive){
+    if(isActive){
+      return (
+        <Grid>
 
-                   <Header/>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/servis' component={Servis} />
+          <Route exact path='/carservis' component={CarServis}/>
+          <Route exact path='/carrepair' component={CarRepair}/>
+          <Route exact path='/default' component={Default} />
+          <Route exact path='/happy' component={Happy} />
+          <Route exact path='/login' component={Login} />
+          
+        </Grid>
+      );
+    } else {
+      return (
+        <Grid>
 
-                     <Grid>
+          <Route exact path='/' component={HomePageServis} />
+          <Route exact path='/myPage' component={MyPage} />
+          <Route exact path='/carservisservis' component={CarServiceDetail} />
+          <Route exact path='/requests' component={Request} />
+          <Route exact path='/loginJob' component={LoginJob} />
+          <Route exact path='/personalProfile' component={HomePageServis} />
 
-                       <Route exact path='/' component={HomePage} />
-                       <Route exact path='/servis' component={Servis} />
-                       <Route exact path='/carservis' component={CarServis}/>
-                       <Route exact path='/carrepair' component={CarRepair}/>
-                       <Route exact path='/faq' component={Default} />
-                       <Route exact path='/happy' component={Happy} />
-                       <Route exact path='/login' component={Login} />
+      </Grid>
+      );      
+    }
+  }
 
-                     </Grid>
-
-                 </div>
-      } else {
-        return <div className="App">
-                <header className="headerServis">
-                  <div className="container">
-                    <nav>
-                      <ul>
-                        <li>
-                          <Link to="/">Moje Stránka</Link>
-                        </li>
-                        <li>
-                          <Link to="/requests">Žádosti</Link>
-                        </li>
-                        <li>
-                          <Link to="/personalProfile">Osobní profil</Link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </header>
-
-                  <Grid>
-
-                    <Route exact path='/' component={HomePageServis} />
-                    <Route exact path='/myPage' component={MyPage} />
-                    <Route exact path='/carservisservis' component={CarServiceDetail} />
-                      <Route exact path='/requests' component={Request} />
-                      <Route exact path='/loginJob' component={LoginJob} />
-                    <Route exact path='/personalProfile' component={HomePageServis} />
-
-                  </Grid>
-              </div>;
-      }
+  renderSwitch() {
+    return(
+      <div >
+        {this.headerSwitch(this.state.toggleActive)}            
+        {this.routeSwitch(this.state.toggleActive)}      
+      </div>    
+    );
   }
 
 
-
   render() {
-
     return (
-        <div>
+        <div className="App">
 
-          <div>
-            <Router>
-              {this.renderSwitch(this.state.toggleActive)}
-            </Router>
-          </div>
+          <Router>
+            {this.renderSwitch()}
+          </Router>
 
           <footer>
             <Grid>
-              <form>
+              <div className="centerToggleButton">
                 <Toggle className="toggleButton"
                   onClick={this.onToggle}
                   on="Klient"
@@ -117,7 +105,7 @@ class App extends Component {
                   offstyle="danger"
                   active={this.state.toggleActive}
                 />
-              </form>
+              </div>
             </Grid>
           </footer>
 

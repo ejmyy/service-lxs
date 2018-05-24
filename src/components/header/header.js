@@ -11,7 +11,7 @@ class Header extends Component {
               <ul>
                 
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/">Domů</Link>
                 </li>
 
                 <li>
@@ -19,19 +19,19 @@ class Header extends Component {
                 </li>
                 
                 <li>
-                  <Link to="/faq">Prodej</Link>            
+                  <Link to="/default">Prodej</Link>            
                 </li>
                 
                 <li>
-                  <Link to="/faq">Půjčka</Link>            
+                  <Link to="/default">Půjčka</Link>            
                 </li>
                 
                 <li>
-                  <Link to="/faq">O nás</Link>            
+                  <Link to="/default">O nás</Link>            
                 </li>
                 
                 <li>
-                  <Link to="/faq">Kontakt</Link>            
+                  <Link to="/default">Kontakt</Link>            
                 </li>
 
               </ul>
