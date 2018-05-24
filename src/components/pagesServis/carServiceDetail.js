@@ -28,10 +28,13 @@ class CarServiceDetail extends Component {
                         <td>Levý blatník</td>
                         <td>Petr Novák</td>
                         <td>
+                            {/* <a href='/loginJob'>Prihlasit se</a> */}
                             <ButtonToolbar>
-                                <Button  bsStyle="primary">
-                                    <Link className="buttonWhite" to='/loginJob' >Přihlásit se</Link>
-                                </Button>
+                                
+                                    <Link className="buttonWhite" to='/loginJob' >
+                                        <Button  bsStyle="primary">Přihlásit se</Button>
+                                    </Link>
+                                
                             </ButtonToolbar>
                         </td>
                         <td><a href='#'>Odeslat</a></td>
