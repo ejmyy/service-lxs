@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Rich Text Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body class="claro">
+    
+
+    <div id="buttons" style="padding:8px; width:700px;">
+        <button id="bold" class="clickMe">B</button>
+        <button id="underline" class="clickMe">U</button>
+        <button id="italic" class="clickMe">I</button>
+        <button id="fontSize" class="clickMe">Text Size</button>
+        <button id="fontName" class="clickMe">Font name</button>
+        <button id="justifyLeft" class="clickMe">Left</button>
+        <button id="justifyCenter" class="clickMe">Center</button>
+        <button id="justifyRight" class="clickMe">Right</button>
+        <button id="justifyFull" class="clickMe">Full</button>        
+        <button id="unorderedList" class="clickMe">UL</button>
+        <button id="orderedList" class="clickMe">OL</button>
+        <button id="paragraph" class="clickMe">P</button>
+     </div>
+
+    <div name="textArea" id="textArea" onfocus="textAreaOnFocus(this)" onblur="textAreaOnBlur(this)" oninput="textAreaOnInput(this)">        
+    </div>
+
+
+    <!-- load Dojo -->
+    <script src="dojo/dojo.js"></script>    
+    <script src="js/rte.js"></script>
+</body>
+</html>
